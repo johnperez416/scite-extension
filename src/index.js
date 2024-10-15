@@ -7,8 +7,9 @@ import 'regenerator-runtime/runtime'
 
 import React from 'react'
 import { render } from 'react-dom'
-import { HideableTally, Tally, TallyLoader } from 'scite-widget'
-import 'scite-widget/lib/index.css'
+import HideableTally from './components/HideableTally'
+import Tally from './components/Tally'
+import TallyLoader from './components/TallyLoader'
 import styles from './styles.css'
 import insertBadges from './badges'
 import { matchReference } from './reference-matching'
@@ -16,7 +17,7 @@ import { parsePDFForTitleandAuthor } from './pdf'
 
 /* global chrome, browser:true */
 if (typeof chrome !== 'undefined' && chrome) {
-  const browser = chrome // eslint-disable-line no-unused-vars
+  window.browser = chrome // eslint-disable-line no-unused-vars
 }
 
 const getStorageItem = async (key) => {
@@ -283,6 +284,14 @@ async function findDoiFromPDF () {
   }
 }
 
+function findDoiFromWOS () {
+  // span with id FullRTa-DOI
+  const doi = document.querySelector('#FullRTa-DOI')
+  if (doi) {
+    return doi.textContent
+  }
+}
+
 async function findDoi () {
   // we try each of these functions, in order, to get a DOI from the page.
   const doiFinderFunctions = [
@@ -297,7 +306,8 @@ async function findDoi () {
     findDoiFromPsycnet,
     findDoiFromPubmed,
     findDoiFromTitle,
-    findDoiFromHostName
+    findDoiFromHostName,
+    findDoiFromWOS
   ]
 
   for (let i = 0; i < doiFinderFunctions.length; i++) {
