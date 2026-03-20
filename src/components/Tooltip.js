@@ -104,7 +104,7 @@ const Message = ({ className, allowRedirect }) => (
 
 const TooltipContent = ({ tally, notices, showTotal, sciteBaseUrl, allowRedirect }) => (
   <div className={styles.tooltipContent}>
-    <img className={styles.logo} src='https://cdn.scite.ai/assets/images/logo.svg' />
+    <img className={styles.logo} src='https://cdn.scite.ai/assets/images/logo.svg' alt='Scite logo on extension' />
     <span className={styles.slogan}>Smart Citations</span>
 
     <Tally tally={tally} notices={notices} showTotal={showTotal} />
@@ -115,7 +115,7 @@ const TooltipContent = ({ tally, notices, showTotal, sciteBaseUrl, allowRedirect
 
 const SectionTallyTooltipContent = ({ tally, sciteBaseUrl, allowRedirect }) => (
   <div>
-    <img className={styles.logo} src='https://cdn.scite.ai/assets/images/logo.svg' />
+    <img className={styles.logo} src='https://cdn.scite.ai/assets/images/logo.svg' alt='Scite logo on extension' />
     <span className={styles.slogan}>Cited in Sections</span>
     <SectionTally tally={tally} />
     {tally && allowRedirect && <a className={styles.button} href={`${sciteBaseUrl}/reports/${tally.doi}`} target='_blank' rel='noopener noreferrer'>View Citations</a>}
