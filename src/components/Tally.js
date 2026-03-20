@@ -124,6 +124,7 @@ const Tally = ({
             [styles.logoSmall]: small
           })}
           src='https://cdn.scite.ai/assets/images/logo.svg'
+          alt='Scite logo on extension'
         />
       )}
 
