@@ -1,3 +1,4 @@
+import '../styles/typography.css'
 import { main, insertBadges } from './main'
 
 main()
