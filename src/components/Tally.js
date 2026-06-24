@@ -5,6 +5,7 @@ import Count from './Count'
 
 import styles from '../styles/Tally.css'
 import { redirectionHandler } from '../util/badgeRedirection'
+import { logoUrl } from '../util/assets'
 
 const RETRACTED_LEMMAS = ['retract', 'withdraw', 'remove']
 
@@ -123,7 +124,7 @@ const Tally = ({
           className={classNames(styles.logo, {
             [styles.logoSmall]: small
           })}
-          src='https://cdn.scite.ai/assets/images/logo.svg'
+          src={logoUrl()}
           alt='Scite logo on extension'
         />
       )}
