@@ -15,66 +15,12 @@
   }
 }
 
-@font-face {
-  font-family: scite-icons;
-  src: url('moz-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: scite-icons;
-  src: url('moz-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.eot');
-  src:
-    url('moz-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.eot') format('embedded-opentype'),
-    url('moz-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.woff2?v=5') format('woff2'),
-    url('moz-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.woff?v=5') format('woff'),
-    url('moz-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.ttf?v=5') format('truetype'),
-    url('moz-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.svg?v=5#fontello') format('svg');
-  src: url('chrome-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.eot');
-  src:
-    url('chrome-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.eot') format('embedded-opentype'),
-    url('chrome-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.woff2?v=5') format('woff2'),
-    url('chrome-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.woff?v=5') format('woff'),
-    url('chrome-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.ttf?v=5') format('truetype'),
-    url('chrome-extension://__MSG_@@extension_id__/fonts/scite-icons/scite-icons.svg?v=5#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /*
- * IBM Plex Sans is bundled with the extension and served from the extension's
- * own origin so it never trips a host page's Content-Security-Policy. Each rule
- * lists both the moz-extension and chrome-extension URL; the browser ignores the
- * scheme it does not recognise. The standalone badge loads this font from
- * Google Fonts via styles/typography.css instead.
+ * NOTE: the scite-icons and IBM Plex Sans @font-face rules are NOT declared here.
+ * They are injected at runtime by src/util/fonts.js using runtime.getURL(), so
+ * each browser references its own resource scheme (chrome-extension://,
+ * moz-extension://, safari-web-extension://). Hardcoding a scheme in CSS makes the
+ * other browsers treat the URL as a remote origin and trip the host page's
+ * font-src CSP. The standalone badge loads these fonts from the CDN/Google Fonts
+ * via styles/typography.css instead.
  */
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src:
-    url('moz-extension://__MSG_@@extension_id__/fonts/ibm-plex-sans/IBMPlexSans-Regular.woff2') format('woff2'),
-    url('chrome-extension://__MSG_@@extension_id__/fonts/ibm-plex-sans/IBMPlexSans-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src:
-    url('moz-extension://__MSG_@@extension_id__/fonts/ibm-plex-sans/IBMPlexSans-Medium.woff2') format('woff2'),
-    url('chrome-extension://__MSG_@@extension_id__/fonts/ibm-plex-sans/IBMPlexSans-Medium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  src:
-    url('moz-extension://__MSG_@@extension_id__/fonts/ibm-plex-sans/IBMPlexSans-SemiBold.woff2') format('woff2'),
-    url('chrome-extension://__MSG_@@extension_id__/fonts/ibm-plex-sans/IBMPlexSans-SemiBold.woff2') format('woff2');
-}

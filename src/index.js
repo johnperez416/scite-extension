@@ -14,6 +14,7 @@ import styles from './styles.css'
 import insertBadges from './badges'
 import { matchReference } from './reference-matching'
 import { parsePDFForTitleandAuthor } from './pdf'
+import { injectFontFaces } from './util/fonts'
 
 /* global chrome, browser:true */
 if (typeof chrome !== 'undefined' && chrome) {
@@ -415,6 +416,7 @@ function runWithDelay () {
   }, delay)
 }
 
+injectFontFaces()
 runWithDelay()
 
 // For SPAs we need to listen to route changes and refresh
