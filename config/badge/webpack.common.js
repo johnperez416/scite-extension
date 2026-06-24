@@ -13,7 +13,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new DefinePlugin({
-      __VERSION__: JSON.stringify(TAG)
+      __VERSION__: JSON.stringify(TAG),
+      __IS_EXTENSION__: JSON.stringify(false)
     })
   ],
 

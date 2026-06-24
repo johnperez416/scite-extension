@@ -1,4 +1,5 @@
 const path = require('path')
+const { DefinePlugin } = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
@@ -39,6 +40,9 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'styles.css'
+    }),
+    new DefinePlugin({
+      __IS_EXTENSION__: JSON.stringify(true)
     })
   ]
 }
