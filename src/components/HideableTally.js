@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import styles from '../styles/HideableTally.css'
 import Icon from './Icon'
+import { singleLetterLogoUrl } from '../util/assets'
 
 const HideableTally = ({
   children,
@@ -34,7 +35,8 @@ const HideableTally = ({
             </div>
             <img
               className={styles.logoSingleLetter}
-              src='https://cdn.scite.ai/assets/images/scite_single_letter.svg'
+              src={singleLetterLogoUrl()}
+              alt='Scite logo'
             />
           </div>
           )}

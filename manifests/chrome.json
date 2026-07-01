@@ -1,7 +1,7 @@
 {
   "name": "Scite",
   "author": "Scite Inc.",
-  "version": "1.39.2",
+  "version": "1.40.0",
   "manifest_version": 3,
   "description": "scite allows users to see how a publication has been cited, providing the citation context and classification",
   "icons": {
@@ -43,7 +43,8 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "fonts/*"
+        "fonts/*",
+        "images/*.svg"
       ],
       "matches": [
         "<all_urls>"

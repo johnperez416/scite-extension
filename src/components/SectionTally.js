@@ -9,6 +9,7 @@ import PieChart from './PieChart'
 import DonutChart from './DonutChart'
 import { generateChartDataFromSectionTally, CHART_TYPES } from '../util/sectionTally'
 import { allowRedirection, redirectionHandler } from '../util/badgeRedirection'
+import { logoUrl } from '../util/assets'
 
 const SectionTally = ({
   source, campaign, autologin, rewardfulID,
@@ -73,7 +74,7 @@ const SectionTally = ({
           className={classNames(styles.logo, {
             [styles.logoSmall]: small
           })}
-          src='https://cdn.scite.ai/assets/images/logo.svg'
+          src={logoUrl()}
           alt='Scite logo on extension'
         />
       )}
