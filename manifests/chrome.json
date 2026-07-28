@@ -3,7 +3,7 @@
   "author": "Scite Inc.",
   "version": "1.40.0",
   "manifest_version": 3,
-  "description": "scite allows users to see how a publication has been cited, providing the citation context and classification",
+  "description": "Scite allows users to see how a publication has been cited, providing the citation context and classification",
   "icons": {
     "16": "images/icons/16.png",
     "32": "images/icons/32.png",

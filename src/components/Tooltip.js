@@ -98,7 +98,7 @@ const Message = ({ className, allowRedirect }) => (
       </p>
     )}
     <p className={styles.message}>
-      scite shows how a scientific paper has been cited by providing the context of the citation, a classification describing whether it supports, mentions, or contrasts the cited claim, and a label indicating in which section the citation was made.
+      Scite shows how a scientific paper has been cited by providing the context of the citation, a classification describing whether it supports, mentions, or contrasts the cited claim, and a label indicating in which section the citation was made.
     </p>
   </div>
 )
